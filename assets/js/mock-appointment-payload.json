@@ -1,0 +1,29 @@
+{
+  "_comment": "Example shape of the data appointment.js sends to submitAppointment(). Use this as a reference when building a real backend endpoint (e.g. POST /api/appointments).",
+  "name": "Jane Doe",
+  "phone": "+8801XXXXXXXXX",
+  "email": "jane.doe@example.com",
+  "age": "34",
+  "gender": "female",
+  "date": "2026-10-05",
+  "time": "18:00",
+  "service": "consultation",
+  "doctor": "dr-name",
+  "message": "Experiencing occasional headaches for the past two weeks."
+}
+async function submitAppointment(data) {
+  try {
+    const response = await fetch('https://your-api.com/api/appointments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) throw new Error('Request failed');
+    showSuccess();
+    form.reset();
+    form.classList.remove('was-validated');
+  } catch (err) {
+    // add an error UI state here — e.g. show an alert-danger box
+    console.error(err);
+  }
+}

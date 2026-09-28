@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Service Details | Prof. Dr. [Doctor Name]</title>
+<meta name="description" content="Detailed information about neurology services offered by Prof. Dr. [Doctor Name].">
+<link rel="canonical" href="https://www.example-clinic.com/service-details.html">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-custom" href="index.html"><span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span><span class="brand-text"><strong>Dr. [Doctor Name]</strong><span>[Clinic Name]</span></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Doctor</a></li>
+        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+        <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <a href="appointment.html" class="btn-primary-custom"><i class="bi bi-calendar-check"></i> Book Appointment</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <h1 id="serviceHeading">Service Details</h1>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="services.html">Services</a></li><li class="breadcrumb-item active" id="breadcrumbCurrent">Details</li></ol></nav>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-8" id="serviceContent">
+        <!-- Populated by JavaScript from data.js -->
+      </div>
+      <div class="col-lg-4">
+        <div class="card-custom p-4 mb-4">
+          <h3 class="h5">Related Services</h3>
+          <ul class="footer-links" id="relatedServices" style="color:var(--text-color);"></ul>
+        </div>
+        <div class="emergency-band text-center p-4">
+          <h3 class="h5 text-white">Book This Service</h3>
+          <a href="appointment.html" class="btn-accent-custom mt-2"><i class="bi bi-calendar-check"></i> Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><h5>About</h5><p>Prof. Dr. [Doctor Name] provides specialist neurology consultation and treatment at [Clinic Name], Dhaka.</p></div>
+      <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5>Services</h5><ul class="footer-links"><li><a href="service-details.html?service=consultation">Neurology</a></li><li><a href="service-details.html?service=stroke">Stroke</a></li><li><a href="service-details.html?service=epilepsy">Epilepsy</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5>Contact</h5><ul class="footer-links"><li><i class="bi bi-telephone-fill me-2"></i>+880 XXX XXXXXXX</li><li><i class="bi bi-envelope-fill me-2"></i>info@example-clinic.com</li></ul></div>
+    </div>
+    <div class="footer-bottom text-center">© 2026 Prof. Dr. [Doctor Name]. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="tel:+880XXXXXXXXXX" class="fab fab-call" aria-label="Call clinic"><i class="bi bi-telephone-fill"></i></a>
+  <a href="#top" class="fab fab-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const key = params.get('service') || 'consultation';
+  const svc = SERVICES_DATA[key] || SERVICES_DATA.consultation;
+
+  document.getElementById('pageTitle').textContent = svc.title + ' | Prof. Dr. [Doctor Name]';
+  document.getElementById('serviceHeading').textContent = svc.title;
+  document.getElementById('breadcrumbCurrent').textContent = svc.title;
+
+  const listHtml = (arr) => '<ul class="qualification-list">' + arr.map(i => `<li><i class="bi bi-check-circle-fill"></i> ${i}</li>`).join('') + '</ul>';
+  const faqHtml = svc.faqs.map((f, i) => `
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button ${i>0?'collapsed':''}" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq${i}">${f.q}</button></h3>
+      <div id="sfaq${i}" class="accordion-collapse collapse ${i===0?'show':''}" data-bs-parent="#serviceFaq"><div class="accordion-body">${f.a}</div></div>
+    </div>`).join('');
+
+  document.getElementById('serviceContent').innerHTML = `
+    <img src="${svc.image}" class="rounded-4 shadow mb-4 w-100" style="max-height:360px;object-fit:cover;" alt="${svc.title}" loading="lazy">
+    <h2>Overview</h2><p>${svc.overview}</p>
+    <h2 class="mt-4">Symptoms</h2>${listHtml(svc.symptoms)}
+    <h2 class="mt-4">Diagnosis</h2>${listHtml(svc.diagnosis)}
+    <h2 class="mt-4">Treatment Options</h2>${listHtml(svc.treatment)}
+    <h2 class="mt-4">When to See a Doctor</h2><p>${svc.whenToSee}</p>
+    <h2 class="mt-4">Frequently Asked Questions</h2>
+    <div class="accordion accordion-custom" id="serviceFaq">${faqHtml}</div>
+  `;
+
+  const related = Object.keys(SERVICES_DATA).filter(k => k !== key).slice(0, 4);
+  document.getElementById('relatedServices').innerHTML = related.map(k =>
+    `<li><a href="service-details.html?service=${k}"><i class="bi bi-arrow-right-short"></i> ${SERVICES_DATA[k].title}</a></li>`
+  ).join('');
+</script>
+</body>
+</html>

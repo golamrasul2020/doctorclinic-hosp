@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | Prof. Dr. [Doctor Name]</title>
+<meta name="description" content="Book your consultation with Prof. Dr. [Doctor Name] at [Clinic Name]. Fill out the appointment form and our team will confirm your visit.">
+<link rel="canonical" href="https://www.example-clinic.com/appointment.html">
+<meta property="og:title" content="Book an Appointment | Prof. Dr. [Doctor Name]">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="topbar d-none d-lg-block">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div><span class="topbar-item"><i class="bi bi-telephone-fill"></i> +880 XXX XXXXXXX</span><span class="topbar-item"><i class="bi bi-envelope-fill"></i> info@example-clinic.com</span><span class="topbar-item"><i class="bi bi-geo-alt-fill"></i> [Clinic Address], Dhaka</span></div>
+    <div class="d-flex align-items-center"><span class="topbar-item mb-0 text-warning"><i class="bi bi-exclamation-triangle-fill"></i> Emergency: +880 XXX XXXXXXX</span>
+      <span class="social-icons"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></span>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-custom" href="index.html"><span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span><span class="brand-text"><strong>Dr. [Doctor Name]</strong><span>[Clinic Name]</span></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Doctor</a></li>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu"><li><a class="dropdown-item" href="service-details.html?service=stroke">Stroke Management</a></li><li><a class="dropdown-item" href="service-details.html?service=epilepsy">Epilepsy Treatment</a></li><li><a class="dropdown-item" href="services.html">View All Services</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#clinic-info">Clinic</a></li>
+        <li class="nav-item"><a class="nav-link active" href="appointment.html">Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <div class="lang-toggle" role="group" aria-label="Language switch"><button type="button" class="active" data-lang="en">English</button><button type="button" data-lang="bn">বাংলা</button></div>
+        <a href="appointment.html" class="btn-primary-custom"><i class="bi bi-calendar-check"></i> Book Appointment</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Book an Appointment</h1>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Appointment</li></ol></nav>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="section-heading">
+          <span class="tag">Schedule a Visit</span>
+          <h2>Request Your Consultation</h2>
+          <p>Complete the form and our team will contact you to confirm your appointment date and time.</p>
+        </div>
+        <ul class="clinic-info-list">
+          <li><i class="bi bi-telephone-fill"></i><div><strong>Call to Confirm</strong><br><a href="tel:+880XXXXXXXXXX">+880 XXX XXXXXXX</a></div></li>
+          <li><i class="bi bi-clock-fill"></i><div><strong>Consultation Hours</strong><br>Sat–Thu, 5:00 PM – 9:00 PM</div></li>
+          <li><i class="bi bi-geo-alt-fill"></i><div><strong>Location</strong><br>[Clinic Address], Dhaka</div></li>
+        </ul>
+        <div class="alert alert-light border mt-3" role="note">
+          <i class="bi bi-info-circle"></i> This form submits to the included PHP backend (<code>/api/appointments.php</code>). It needs to be served by a PHP-enabled web server to work — opening this file directly (<code>file://</code>) or hosting on a non-PHP static host won't send the request. See <code>/api/README.md</code> for setup.
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left">
+        <form class="appointment-form needs-validation" id="appointmentForm" novalidate>
+          <div id="appointmentSuccess" class="alert alert-success" role="alert">
+            <i class="bi bi-check-circle-fill"></i> Thank you! Your appointment request has been received. Our team will contact you shortly to confirm.
+          </div>
+          <div id="appointmentError" class="alert alert-danger" style="display:none;" role="alert"></div>
+          <!-- Honeypot field: hidden from real visitors via CSS, left blank by them.
+               A filled value signals a bot and appointments.php silently ignores it. -->
+          <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;" aria-hidden="true">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="patientName">Patient Name *</label>
+              <input type="text" class="form-control" id="patientName" name="patientName" required minlength="2">
+              <div class="invalid-feedback">Please enter the patient's full name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="phoneNumber">Phone Number *</label>
+              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+880 XXX XXXXXXX" required>
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label" for="age">Age *</label>
+              <input type="number" class="form-control" id="age" name="age" min="0" max="119" required>
+              <div class="invalid-feedback">Please enter a valid age.</div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label" for="gender">Gender *</label>
+              <select class="form-select" id="gender" name="gender" required>
+                <option value="" selected disabled>Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="invalid-feedback">Please select a gender.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="preferredDate">Preferred Date *</label>
+              <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+              <div class="invalid-feedback">Please choose a valid upcoming date.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="preferredTime">Preferred Time *</label>
+              <select class="form-select" id="preferredTime" name="preferredTime" required>
+                <option value="" selected disabled>Select a time slot</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+              </select>
+              <div class="invalid-feedback">Please select a preferred time.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="service">Select Service *</label>
+              <select class="form-select" id="service" name="service" required>
+                <option value="" selected disabled>Choose a service</option>
+                <option value="consultation">Neurology Consultation</option>
+                <option value="stroke">Stroke Management</option>
+                <option value="epilepsy">Epilepsy Treatment</option>
+                <option value="migraine">Headache &amp; Migraine</option>
+                <option value="parkinsons">Parkinson's Disease</option>
+                <option value="telemedicine">Telemedicine</option>
+              </select>
+              <div class="invalid-feedback">Please select a service.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="doctorSelect">Select Doctor *</label>
+              <select class="form-select" id="doctorSelect" name="doctorSelect" required>
+                <option value="" selected disabled>Choose a doctor</option>
+                <option value="dr-name">Prof. Dr. [Doctor Name]</option>
+              </select>
+              <div class="invalid-feedback">Please select a doctor.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="message">Message (optional)</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Briefly describe your concern"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-primary-custom w-100 justify-content-center"><i class="bi bi-calendar-check"></i> Book Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><h5>About</h5><p>Prof. Dr. [Doctor Name] provides specialist neurology consultation and treatment at [Clinic Name], Dhaka.</p>
+        <span class="social-icons"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></span>
+      </div>
+      <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="appointment.html">Appointment</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5>Services</h5><ul class="footer-links"><li><a href="service-details.html?service=consultation">Neurology</a></li><li><a href="service-details.html?service=stroke">Stroke</a></li><li><a href="service-details.html?service=epilepsy">Epilepsy</a></li><li><a href="service-details.html?service=migraine">Headache</a></li><li><a href="service-details.html?service=parkinsons">Movement Disorders</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5>Contact</h5><ul class="footer-links"><li><i class="bi bi-telephone-fill me-2"></i>+880 XXX XXXXXXX</li><li><i class="bi bi-envelope-fill me-2"></i>info@example-clinic.com</li><li><i class="bi bi-geo-alt-fill me-2"></i>[Clinic Address], Dhaka</li><li><i class="bi bi-clock-fill me-2"></i>Sat–Thu, 5–9 PM</li></ul></div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2026 Prof. Dr. [Doctor Name]. All Rights Reserved.</p>
+      <p class="mb-0"><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/880XXXXXXXXXX" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i><span class="fab-tooltip">WhatsApp</span></a>
+  <a href="tel:+880XXXXXXXXXX" class="fab fab-call" aria-label="Call clinic"><i class="bi bi-telephone-fill"></i><span class="fab-tooltip">Call Now</span></a>
+  <a href="#top" class="fab fab-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i><span class="fab-tooltip">Back to Top</span></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/appointment.js"></script>
+</body>
+</html>

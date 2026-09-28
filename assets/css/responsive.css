@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Responsive overrides — mobile-first adjustments layered on style.css
+   Breakpoints follow Bootstrap 5: 576 / 768 / 992 / 1200 / 1400
+   ========================================================================== */
+
+/* Large desktops (>1400px): slightly tighter container feel handled by Bootstrap */
+
+/* Laptops / small desktops */
+@media (max-width:1199.98px){
+  .hero-slide{min-height:80vh;}
+  .doctor-photo-wrap .exp-badge{right:.5rem;}
+}
+
+/* Tablets */
+@media (max-width:991.98px){
+  .topbar .topbar-item.d-lg-only{display:none !important;}
+  .hero-slide{min-height:auto;padding:7rem 0 3rem;text-align:center;}
+  .hero-slide .hero-desc{margin-left:auto;margin-right:auto;}
+  .hero-cta{justify-content:center;}
+  .floating-card{margin:2rem auto 0;}
+  .doctor-photo-wrap{margin-bottom:3rem;}
+  .doctor-photo-wrap::after{display:none;}
+  .section-heading.text-center-md{text-align:center;margin-left:auto;margin-right:auto;}
+  .emergency-band{text-align:center;padding:2.2rem;}
+  .emergency-band .d-flex.justify-content-lg-end{justify-content:center !important;margin-top:1.5rem;}
+}
+
+/* Mobile landscape / large phones */
+@media (max-width:767.98px){
+  .section-padding{padding:3rem 0;}
+  .topbar{font-size:.78rem;}
+  .topbar .topbar-item{margin-right:1rem;}
+  .main-navbar .btn-primary-custom{padding:.6rem 1.2rem;font-size:.85rem;}
+  .hero-slide h1{font-size:2rem;}
+  .doctor-photo-wrap .exp-badge{padding:.7rem 1rem;bottom:-1rem;}
+  .doctor-photo-wrap .exp-badge strong{font-size:1.5rem;}
+  .stat-item .stat-num{font-size:2rem;}
+  .appointment-form{padding:1.5rem;}
+  .emergency-band{padding:1.8rem;}
+  .floating-actions{right:.8rem;bottom:.8rem;}
+  .floating-actions .fab{width:46px;height:46px;font-size:1.05rem;}
+  .fab-tooltip{display:none;}
+}
+
+/* Small phones */
+@media (max-width:575.98px){
+  h1{font-size:1.85rem;}
+  h2{font-size:1.5rem;}
+  .hero-cta{flex-direction:column;align-items:stretch;}
+  .hero-cta a{justify-content:center;}
+  .floating-card{max-width:100%;}
+  .clinic-info-list li{flex-direction:column;gap:.3rem;}
+  .gallery-filters{gap:.4rem;}
+  .gallery-filters button{padding:.4rem .9rem;font-size:.82rem;}
+}
+
+/* Ensure no horizontal scroll on any breakpoint */
+html,body{max-width:100%;overflow-x:hidden;}
+img,svg,video{max-width:100%;}
