@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Doctor Clinic logo</title>
-  <desc id="desc">Blue medical cross inside a teal circle</desc>
-  <circle cx="48" cy="48" r="44" fill="#14487f"/>
-  <circle cx="48" cy="48" r="36" fill="#ffffff"/>
-  <path fill="#12847f" d="M39 20h18v19h19v18H57v19H39V57H20V39h19z"/>
-  <path fill="#4caf82" d="M43 24h10v19h19v10H53v19H43V53H24V43h19z"/>
-</svg>
+
